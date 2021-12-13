@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover" />
+    <title>MICI Staff</title>
+    <script type="module" crossorigin src="/mici-staff-demo/assets/index.079d027f.js"></script>
+    <link rel="modulepreload" href="/mici-staff-demo/assets/lib.f6218f97.js">
+    <link rel="stylesheet" href="/mici-staff-demo/assets/lib.239e8b71.css">
+    <link rel="stylesheet" href="/mici-staff-demo/assets/index.09cb1209.css">
+  </head>
+  <body>
+    <div id="app">
+      <style>
+        .loading {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .spinner {
+          --spinner-size: 4;
+          --line-color: #409EFF;
+          --line-alpha: 1;
+          --ring-color: #000000;
+          --ring-alpha: 0;
+          --ring-size: 3;
+          font-size: calc(var(--spinner-size) * 1em);
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+        }
+        .spinner .line {
+          fill: none;
+          stroke: var(--line-color);
+          stroke-width: var(--ring-size);
+          opacity: var(--line-alpha);
+          stroke-linecap: round;
+          transform-origin: 50% 50%;
+          transform: rotate3d(0, 0, 1, 0deg);
+          animation:
+            2156ms spinner-arc ease-in-out infinite,
+            1829ms spinner-rotate linear infinite;
+        }
+        .spinner .ring {
+          fill: none;
+          stroke: var(--ring-color);
+          stroke-width: var(--ring-size);
+          opacity: var(--ring-alpha);
+        }
+        @keyframes spinner-rotate {
+          to { transform: rotate3d(0, 0, 1, 360deg); }
+        }
+        @keyframes spinner-arc {
+          from { stroke-dasharray: 0 150; stroke-dashoffset: 0; }
+          to { stroke-dasharray: 100 150; stroke-dashoffset: -140; }
+        }
+      </style>
+      <div class="loading">
+        <svg viewBox="0 0 50 50" class="spinner">
+          <circle class="ring" cx="25" cy="25" r="22.5" />
+          <circle class="line" cx="25" cy="25" r="22.5" />
+        </svg>
+      </div>
+    </div>
+    
+  </body>
+</html>
